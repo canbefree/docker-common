@@ -3,7 +3,8 @@ version: '3.4'
 services:
   etcd-1:
     container_name: etcd-1
-    image: bitnami/etcd:3
+    build: 
+      context: ./etcd
     privileged: true
     restart: always
     environment: 
@@ -22,13 +23,15 @@ services:
       - "ENDPOINTS=etcd-1:2379"
 
       - "ETCD_INITIAL_CLUSTER_TOKEN=cluster"
-    # ports: 
-      # - "2379:2379"
+    ports: 
+      - "9090:9090"
+      - "2379:2379"
     networks: 
       - app_net
 
   etcd-2:
-    image: bitnami/etcd:3
+    build: 
+      context: ./etcd
     container_name: etcd-2
     privileged: true
     restart: always
@@ -49,13 +52,14 @@ services:
 
       - "ETCD_INITIAL_CLUSTER_TOKEN=cluster"
       
-    # ports: 
-      # - "2379:2379"
+    ports: 
+      - "12379:2379"
     networks: 
       - app_net
 
   etcd-3:
-    image: bitnami/etcd:3
+    build: 
+      context: ./etcd
     container_name: etcd-3
     privileged: true
     restart: always
@@ -74,9 +78,9 @@ services:
       - "ALLOW_NONE_AUTHENTICATION=yes"
       - "ENDPOINTS=etcd-3:2379"
       - "ETCD_INITIAL_CLUSTER_TOKEN=cluster"
-
-    # ports: 
-      # - "2379:2379"
+    
+    ports: 
+      - "22379:2379"
     networks: 
       - app_net
 
