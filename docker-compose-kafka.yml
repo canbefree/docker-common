@@ -9,8 +9,6 @@ services:
 
   kafka:
     image:  registry.cn-shenzhen.aliyuncs.com/canbefree/kafka:v1.0.0
-    # build: 
-    #   context: ./kafka
     ports:
       - "9092"
     environment:
