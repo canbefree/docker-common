@@ -44,4 +44,6 @@ https://prometheus.io/
 | mysqld | mysql_global_status_connection_errors_total          | 服务器错误         |
 
 
+kafka docker部署参考 wurstmeister/kafka-docker [^1][1]
 
+[1]:https://github.com/wurstmeister/kafka-docker
