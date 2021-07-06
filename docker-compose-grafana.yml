@@ -28,7 +28,7 @@ services:
   redis-exporter:
     image: bitnami/redis-exporter
     environment: 
-      REDIS_ADDR: "redis://redis-server:6379"
+      REDIS_ADDR: "redis://redis-7000:7000"
     ports: 
       - "9121:9121"
     networks:

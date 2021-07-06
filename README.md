@@ -30,7 +30,7 @@ vm.max_map_count=262144
 
 - [X] etcd指标监控 https://etcd.io/docs/v3.4/metrics/
 - [X] mysql指标监控 https://github.com/prometheus/mysqld_exporter
-- [X] redis指标监控
+- [X] redis指标监控 https://github.com/oliver006/redis_exporter
 
 ### prometheus指标查询
 https://prometheus.io/
@@ -42,7 +42,8 @@ https://prometheus.io/
 | mysqld | mysql_global_status_threads_running                  | 正在运行的查询连接 |
 | mysqld | mysql_global_status_aborted_connects                 | 拒绝连接数         |
 | mysqld | mysql_global_status_connection_errors_total          | 服务器错误         |
-
+| redis  | redis_uptime_in_seconds                              | 服务器运行总时长   |
+| redis  |                                                      | redis运行内存      |
 
 kafka docker部署参考 wurstmeister/kafka-docker [^1][1]
 
