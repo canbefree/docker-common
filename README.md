@@ -30,7 +30,7 @@ vm.max_map_count=262144
 
 - [X] etcd指标监控 https://etcd.io/docs/v3.4/metrics/
 - [X] mysql指标监控 https://github.com/prometheus/mysqld_exporter
-- [ ] redis指标监控
+- [X] redis指标监控
 
 ### prometheus指标查询
 https://prometheus.io/

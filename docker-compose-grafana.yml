@@ -24,7 +24,16 @@ services:
       - "9104:9104"
     networks:
       - app_net
-
+  
+  redis-exporter:
+    image: bitnami/redis-exporter
+    environment: 
+      REDIS_ADDR: "redis://redis-server:6379"
+    ports: 
+      - "9121:9121"
+    networks:
+      - app_net
+  
   prometheus:
     build: 
       context: ./grafana
