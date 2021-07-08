@@ -3,12 +3,17 @@ version: '3.4'
 services:
 
   redis-cluster:
-    image: redis
-    command: "redis-cli --cluster create 172.18.0.13:7000 172.18.0.12:7001 172.18.0.11:7002"
+    build: 
+      context: ./redis/cluster
+    command: "/tmp/create-cluster.sh redis-7000:7000 redis-7001:7001 redis-7002:7002 "
     privileged: true
-    restart: always
+    # restart: always
     ports: 
       - "6379:6379"
+    depends_on: 
+      - redis-7000
+      - redis-7001
+      - redis-7002
     networks: 
       - app_net
 
