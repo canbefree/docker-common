@@ -15,3 +15,6 @@ https://github.com/redis/redis/blob/unstable/utils/create-cluster/create-cluster
 http://localhost:9121/scrape?target=redis%3A%2F%2Fredis-7002%3A7002
 
 
+### grafana 监控script
+
+https://grafana.com/grafana/plugins/redis-datasource/?tab=installation

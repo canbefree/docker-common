@@ -31,7 +31,7 @@ vm.max_map_count=262144
 > 导入redis监控模板
 https://grafana.com/api/dashboards/763/revisions/1/
 ## redis
-参考目录下README.md
+Read [grafana redis](redis/README.md)
 ### 监控
 
 - [X] etcd指标监控 https://etcd.io/docs/v3.4/metrics/
