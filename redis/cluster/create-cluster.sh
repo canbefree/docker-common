@@ -20,7 +20,7 @@ function getDomainIp() {
 	result=$(ping $url -c 1 | sed '1{s/[^(]*(//;s/).*//;q}')
 }
 
-cmd="redis-cli --cluster create --cluster-yes --cluster-replicas "
+cmd="redis-cli --cluster create --cluster-yes "
 for domain in $@; do
 	getDomainIp $domain
 	cmd=$(printf "%s %s:%s " "$cmd" "$result" "$port")
